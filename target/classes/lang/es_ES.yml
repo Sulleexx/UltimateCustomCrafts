@@ -1,0 +1,12 @@
+SuccessfulReload: "{prefix} Plugin recargado con éxito".
+SuccessfulLoadRecipe: "{prefix} Receta cargada con éxito".
+SuccessfulUnloadRecipe: "{prefix} Receta descargada con éxito".
+FailOnReload: "{prefix} Error al recargar el plugin."
+FailOnLoadRecipe: "{prefix} Error al cargar una receta."
+FailOnUnloadRecipe: "{prefix} Error al cargar una receta."
+NoPermission: "{prefix} No tienes permiso para ejecutar este comando".
+NotifyMessageOnCraft: "{prefix} El usuario {player} ha creado un {item}!"
+CraftingMessage: "¡Has creado un nuevo ítem!"
+NotPlayer: "El comando sólo puede ser usado por jugadores"
+UnknownCommand: "Comando desconocido"
+InvalidArguments: "Argumentos incorrectos"

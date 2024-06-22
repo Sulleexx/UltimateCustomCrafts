@@ -1,0 +1,15 @@
+# UltimateCustomCrafts configuration file
+
+# General Settings
+General:
+  Language: "en_US"          # Choose a language: ru_RU, en_US, kz_KZ, ua_UA, zh_CN, es_ES, fr_FR, de_DE.
+  Enable-plugin: true        # Enable plugin? true | false
+  Plugin-Prefix: "&6[UCC]&r" # Custom chat prefix for plugin messages (use color codes or minimessage format)
+  Permission-Admin: "ultimatecustomcrafts.admin" # Permission for using admin commands
+
+# Crafting Settings
+Crafting: # Will be work in next update!!!
+  EnableCustomCrafts: true   # Enable custom crafting recipes? true | false
+  NotifyMessageOnCraft: true # Notify players when a custom item is crafted? true | false
+  ShowCraftingMessages: true # Show messages when crafting? true | false
+

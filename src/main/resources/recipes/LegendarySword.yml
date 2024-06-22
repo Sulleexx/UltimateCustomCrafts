@@ -1,0 +1,18 @@
+Enabled: true           # Enable recipe? true | false
+Ingredients:            # Ingredients for recipe
+  - GLOWSTONE_DUST GLOWSTONE_DUST GLOWSTONE_DUST
+  - GLOWSTONE_DUST SEA_LANTERN GLOWSTONE_DUST
+  - GLOWSTONE_DUST GLOWSTONE_DUST GLOWSTONE_DUST
+ResultItem:             # Result item
+  Item: "HEAVY"         # Name result item
+  Amount: 64            # Amount of item
+HEAVY:                  # Custom result item
+  Material: "IRON_SWORD"          # Material
+  DisplayName: "&9Legendary &dsword"      # Display name support a legacy codes and minimessage format
+  Lore:                           # Lore support a legacy codes and minimessage format
+    - "&bSword of legends"
+    - "&bwith immense weight"
+  Durability: 100                 # Durability
+  CustomModelData: 3456           # CustomModelData
+  Enchantments:                   # Enchantments
+    - Unbreaking [3]              # Number in [] it's a lvl of enchant
