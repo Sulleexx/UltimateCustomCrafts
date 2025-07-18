@@ -51,13 +51,19 @@ public class LanguageConfig {
         return doubleFormat(rawString);
     }
 
+    public static Component getFormattedStringE(String text) {
+        String rawString = text;
+        return doubleFormat(rawString);
+    }
+
+
     public static Component getFormattedString(String path, String player) {
         String rawString = lang.getString(path, "undefined");
         if (rawString.contains("{prefix}")) {
-            rawString.replace("{prefix}", Objects.requireNonNull(config.getString("General.Plugin-Prefix")));
+            rawString = rawString.replace("{prefix}", config.getString("General.Plugin-Prefix"));
         }
         if (rawString.contains("{player}")) {
-            rawString.replace("{player}", player);
+            rawString = rawString.replace("{player}", player);
         }
         return doubleFormat(rawString);
     }

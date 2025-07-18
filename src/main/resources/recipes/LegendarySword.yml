@@ -1,4 +1,4 @@
-Enabled: true           # Enable recipe? true | false
+Enabled: false           # Enable recipe? true | false
 Ingredients:            # Ingredients for recipe
   - GLOWSTONE_DUST GLOWSTONE_DUST GLOWSTONE_DUST
   - GLOWSTONE_DUST SEA_LANTERN GLOWSTONE_DUST
@@ -15,4 +15,8 @@ HEAVY:                  # Custom result item
   Durability: 100                 # Durability
   CustomModelData: 3456           # CustomModelData
   Enchantments:                   # Enchantments
-    - Unbreaking [3]              # Number in [] it's a lvl of enchant
+    - Unbreaking [3]              # Number in [] is the lvl of the enchantment
+  NBTTags:
+    damage: 100
+    rarity: epic
+    #abacus tut nakakal

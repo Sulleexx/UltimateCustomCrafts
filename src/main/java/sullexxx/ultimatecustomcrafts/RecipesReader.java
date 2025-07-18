@@ -1,5 +1,7 @@
 package sullexxx.ultimatecustomcrafts;
 
+import io.github.bananapuncher714.nbteditor.NBTEditor;
+import jdk.internal.jmod.JmodFile;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer;
 import org.bukkit.Bukkit;
@@ -165,14 +167,14 @@ public class RecipesReader {
         ItemMeta meta = item.getItemMeta();
         if (meta != null) {
             if (itemData.containsKey("DisplayName")) {
-                meta.displayName(LanguageConfig.getFormattedString(itemData.get("DisplayName").toString()));
+                meta.displayName(LanguageConfig.getFormattedStringE(itemData.get("DisplayName").toString()));
             }
 
             if (itemData.containsKey("Lore")) {
                 List<String> loreLines = (List<String>) itemData.get("Lore");
                 List<Component> formattedLore = new ArrayList<>();
                 for (String line : loreLines) {
-                    formattedLore.add(LanguageConfig.getFormattedString(line));
+                    formattedLore.add(LanguageConfig.getFormattedStringE(line));
                 }
 
                 List<String> plainTextLore = formattedLore.stream()
@@ -218,8 +220,15 @@ public class RecipesReader {
             }
 
             item.setItemMeta(meta);
-        }
 
+            if (itemData.containsKey("NBTTags")) {
+                Map<String, Object> tags = (Map<String, Object>) itemData.get("NBTTags");
+                for (String nbt : tags.keySet()) {
+                    Object value = tags.get(nbt);
+                    item = NBTEditor.set(item, value, nbt);
+                }
+            }
+        }
         return item;
     }
 }
